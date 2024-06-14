@@ -1,0 +1,144 @@
+/* Basic reset and styling */
+body, div, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+body {
+    background-color: #f0f0f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container styling */
+.container {
+    width: 100%;
+    overflow: hidden; /* Prevent scrollbars */
+    padding: 0 0px;
+}
+
+/* Welcome section */
+.banner {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background: url("images/Banner.png") no-repeat center center; /* Add your background image here */
+    background-size: cover; /* Ensure the image covers the entire banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.banner-text {
+    z-index: 1;
+}
+
+.banner-text h1 {
+	position: relative;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.banner-text p {
+	position: relative;
+    font-size: 1.0rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Featured destinations */
+.featured-destinations {
+    padding: 50px 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    margin-top: -50px;
+    z-index: 2;
+    position: relative;
+}
+
+.destination-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.destination {
+    flex: 1 1 calc(33% - 20px);
+    max-width: calc(33% - 20px);
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.destination:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.destination img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.destination img:hover {
+    transform: scale(1.05);
+}
+
+/* About section */
+.about-section {
+    padding: 50px 20px;
+    background: linear-gradient(to right, #f7f7f7, #e2e2e2);
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 600px) {
+    .destination {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .banner-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner-text p {
+        font-size: 1.2rem;
+    }
+}

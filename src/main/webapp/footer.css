@@ -1,0 +1,41 @@
+footer {
+    background-color: #191970; /* Background color for the footer */
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding for the footer */
+    text-align: center; /* Center-align text */
+    width: 100%; /* Full width */
+    font-family: Garamond, serif;
+    height: 150px; /* Adjusted height for better content fitting */
+    box-sizing: border-box; /* Ensure padding is included in height calculation */
+    position: relative; /* Allow positioning of child elements */
+}
+
+footer .logo {
+    position: absolute; /* Position the logo */
+    top: 50%; /* Center vertically */
+    left: 10%; /* Adjust position to your preference */
+    transform: translate(-50%, -50%); /* Adjust position to be centered vertically */
+    width: auto; /* Maintain aspect ratio */
+    height: 80px; /* Adjust height as needed */
+}
+
+footer .copy-right, footer .system-name {
+    margin: 0;
+    position: relative;
+    top: 20%;
+}
+
+footer .copy-right {
+    margin-bottom: 10px; /* Adjust spacing between paragraphs */
+}
+
+footer .system-name {
+    margin-top: 10px; /* Adjust spacing between paragraphs */
+}
+
+/* Optional: Adjust the logo size on different screen sizes */
+@media (max-width: 600px) {
+    footer .logo {
+        height: 40px; /* Smaller logo on small screens */
+    }
+}
