@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Flight</title>
+<title>Add Flights</title>
 <link href="addflight.css" rel="stylesheet" type="text/css"/>
 
 </head>
